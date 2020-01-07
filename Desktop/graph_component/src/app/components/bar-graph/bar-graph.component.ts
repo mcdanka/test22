@@ -8,7 +8,7 @@ export interface BarGraphData {
   graphLabel: string;
   backgroundColor: string[];
   borderColor: string[];
-  borderWidth: number[];
+  borderWidth: number;
 }
 
 @Component({
@@ -18,7 +18,7 @@ export interface BarGraphData {
 })
 export class BarGraphComponent implements OnInit {
 
-  element: any = document.getElementById('myChart');
+  element: any = document.getElementById('myBarChart');
   ctx;
   myChart;
 
