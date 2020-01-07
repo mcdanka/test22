@@ -22,10 +22,7 @@ export class HomePage implements OnInit {
 
   async getBarGraphData() {
     this.barGraphData = await this.graphService.getBarGraphData();
-    // 
-    //
-    //
-    //
+
 
   }
 

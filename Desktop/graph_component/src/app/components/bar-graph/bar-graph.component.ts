@@ -7,6 +7,8 @@ export interface BarGraphData {
   yaxis: string;
   graphLabel: string;
   backgroundColor: string[];
+  borderColor: string[];
+  borderWidth: number[];
 }
 
 @Component({
@@ -41,15 +43,8 @@ export class BarGraphComponent implements OnInit {
           label: this.barGraphData.graphLabel,
           data: this.barGraphData.data,
           backgroundColor: this.barGraphData.backgroundColor,
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
+          borderColor: this.barGraphData.borderColor,
+          borderWidth: this.barGraphData.borderWidth
         }]
       },
       options: {
