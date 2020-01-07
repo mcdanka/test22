@@ -20,7 +20,7 @@ export class BarGraphComponent implements OnInit {
 
   element: any = document.getElementById('myBarChart');
   ctx;
-  myChart;
+  myBarChart;
 
 
   @Input() barGraphData: BarGraphData;
@@ -35,7 +35,7 @@ export class BarGraphComponent implements OnInit {
   }
 
   createChart() {
-    this.myChart = new Chart(this.ctx, {
+    this.myBarChart = new Chart(this.ctx, {
       type: 'bar',
       data: {
         labels: this.barGraphData.xaxis,
